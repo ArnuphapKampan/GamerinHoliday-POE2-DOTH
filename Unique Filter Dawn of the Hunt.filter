@@ -57,7 +57,7 @@ Show
 
 Show # ยูนีคดีๆ อันไหนเด็ดๆ เอาชื่อมาใส่ ตรง BaseType
 	Rarity Unique
-	BaseType "Jewelled Gloves" "Heavy Belt" "Crude Bow" "Long Quarterstaff" "Shrine Sceptre" "Grand Regalia" "Armoured Cap" "Furtive Wraps" "Utility Belt" "Ornate Belt" "Emerald Ring" "Stone Tower" "Flask" "Crucible Tower" "Burnished Gauntlets" "Conqueror Plate" "Fine Bracers" "Gold Amulet"
+	BaseType "Spiked Club" "Jewelled Gloves" "Heavy Belt" "Crude Bow" "Long Quarterstaff" "Shrine Sceptre" "Grand Regalia" "Armoured Cap" "Furtive Wraps" "Utility Belt" "Ornate Belt" "Emerald Ring" "Stone Tower" "Flask" "Crucible Tower" "Burnished Gauntlets" "Conqueror Plate" "Fine Bracers" "Gold Amulet"
 	SetTextColor 0 0 0
 	SetBorderColor 0 0 0
 	SetBackgroundColor 175 96 37
@@ -141,7 +141,7 @@ Show
 
 Show
 	Class == "Stackable Currency"
-	BaseType "Orb of Transmutation" "Orb of Augmentation"
+	BaseType "Orb of Transmutation" "Orb of Augmentation" "Scroll of Wisdom"
 	SetFontSize 26
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
@@ -460,7 +460,7 @@ Show # Support Gems หินที่ใช้เลือก GEM ใส่ใ�
 	
 Show # Spirit Gems หินสกิลวิญญาณ
 	BaseType == "Uncut Spirit Gem"
-    ItemLevel >= 15
+    ItemLevel >= 1
 	SetFontSize 35
 	SetTextColor 155 241 249  
 	SetBorderColor 55 0 107 
@@ -597,16 +597,17 @@ Show # WAYSTONES
 	MinimapIcon 0 Grey Cross	
 
 #อันนี้ผมซ่อนไว้ไม่ต้องสนใจ หลังตัวอักษร "#" ฟิลเตอร์มันจะไม่อ่าน
-#Show # WAYSTONES
-#	BaseType "Waystone"
-#	WaystoneTier <= 12
-#	Rarity = Rare
-#	SetFontSize 36
-#	SetTextColor 255 245 40 
-#	SetBorderColor 255 255 255 
-#	SetBackgroundColor 255 255 82 50
-#	CustomAlertSound "ของดีย์_1.mp3" 300
-#	PlayEffect Yellow
+Show # WAYSTONES
+	BaseType "Waystone"
+	WaystoneTier <= 13
+	Rarity = Rare
+	SetFontSize 36
+	SetTextColor 255 245 40 
+	SetBorderColor 255 255 255 
+	SetBackgroundColor 255 255 82 50
+	CustomAlertSound "ของดีย์_1.mp3" 300
+	PlayEffect Yellow
+	MinimapIcon 0 Grey Cross
 
 #Show # WAYSTONES
 #	BaseType "Waystone"
@@ -622,6 +623,7 @@ Show # WAYSTONES
 Show # WAYSTONES
 	BaseType "Waystone"
 	WaystoneTier >= 1
+	MinimapIcon 0 Grey Cross
 
 Show # WAYSTONES
 	Class "Pinnacle Keys"
@@ -655,8 +657,8 @@ Show
 
 Show
 	Rarity = Normal Magic Rare
-	BaseType "Massive Spear" "Grand Spear" "Spiked Spear" "Sacred Maul" "Ironwood Greathammer" "Massive Greathammer" "Attuned Wand" "Siphoning Wand" "Abyssal Cuirass" "Ornate Plate" "Sleek Jacket" "Torment Jacket"
-	ItemLevel >= 65
+	BaseType "Rattling Sceptre" "Massive Spear" "Grand Spear" "Spiked Spear" "Sacred Maul" "Ironwood Greathammer" "Massive Greathammer" "Attuned Wand" "Siphoning Wand" "Abyssal Cuirass" "Ornate Plate" "Sleek Jacket" "Torment Jacket"
+	ItemLevel >= 79
 	SetFontSize 40
 	SetTextColor 81 255 139 
 	SetBorderColor 0 195 180
@@ -805,7 +807,19 @@ Show # เจาะจง สร้อยสเตล่า ขาว
 	MinimapIcon 0 Yellow Pentagon
     PlayEffect Orange Temp	
 	
-Show # ซ่อน แหวน สร้อย เข็มขัด เจาะจงชื่อรุ่นตาม BaseType
+Show # แสดง แหวน Magic เจาะจงชื่อรุ่นตาม BaseType
+	Class "Rings"
+    Rarity = Magic 
+    BaseType "Ruby Ring" "Topaz Ring" "Emerald Ring" "Amethyst Ring" "Prismatic Ring"
+	SetFontSize 33
+	SetTextColor 255 255 255 
+	SetBorderColor 255 255 255
+	SetBackgroundColor 200 200 200 150 
+	PlayAlertSoundPositional 16 300
+	CustomAlertSound "จ๊ะจ้าง.mp3" 300
+	MinimapIcon 0 Yellow Pentagon
+
+Show # แสดง แหวน สร้อย เข็มขัด Normal เจาะจงชื่อรุ่นตาม BaseType
     Class "Rings" "Amulets" "Belts"
     Rarity = Normal 
     BaseType "Heavy Belt" "Ornate Belt" "Double Belt" "Ruby Ring" "Topaz Ring" "Emerald Ring" "Amethyst Ring" "Prismatic Ring"
@@ -1177,6 +1191,7 @@ Show
 
 Show
 	Class = "Flask" 
+	AreaLevel >= 80
 	SetTextColor 0 199 239 
 	SetBorderColor 34 91 255 
 	SetBackgroundColor 0 104 22 155
