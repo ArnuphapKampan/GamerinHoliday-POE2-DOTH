@@ -620,9 +620,9 @@ Show # WAYSTONES
 #	CustomAlertSound "แมพT13.mp3" 300
 #	PlayEffect cyan Temp
 	
-Show # WAYSTONES
+Hide # WAYSTONES
 	BaseType "Waystone"
-	WaystoneTier >= 1
+	WaystoneTier < 14
 	MinimapIcon 0 Grey Cross
 
 Show # WAYSTONES
