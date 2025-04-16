@@ -436,7 +436,7 @@ Hide # บรรทัดสุดท้าย ไว้เก็บตก ซ�
 
 Show # Skill Gems หินสกิลทั่วไป
 	BaseType == "Uncut Skill Gem"
-    ItemLevel >= 18 #ปรับเวลตรงนี้
+    ItemLevel >= 19 #ปรับเวลตรงนี้
 	SetFontSize 35
 	SetTextColor 155 241 249  
 	SetBorderColor 55 0 107 
@@ -484,7 +484,7 @@ Hide #บรรทัดปิด ไว้เก็บตก ซ่อน น�
 
 Show # NORMAL ระดับไอเท่ม ขาวธรรมดา
 	Quality >= 10
-	Class = "Helmet" "Boots" "Gloves" "Foci" "Body" 
+	Class = "Flask" "Helmet" "Boots" "Gloves" "Foci" "Body" 
 	Rarity Normal
 	SetFontSize 35
 	SetTextColor 250 187 69
@@ -496,7 +496,7 @@ Show # NORMAL ระดับไอเท่ม ขาวธรรมดา
 
 Show # MAGIC ระดับไอเท่ม ฟ้า เมจิก
 	Quality >= 10
-	Class = "Helmet" "Boots" "Gloves" "Foci" "Body" 
+	Class = "Flask" "Helmet" "Boots" "Gloves" "Foci" "Body" 
 	Rarity Magic
 	SetFontSize 35
 	SetTextColor 250 187 69
@@ -508,7 +508,7 @@ Show # MAGIC ระดับไอเท่ม ฟ้า เมจิก
 
 Show # RARE ระดับไอเท่ม แรร์เหลืองทอง
 	Quality >= 10
-	Class = "Helmet" "Boots" "Gloves" "Foci" "Body" 
+	Class = "Flask" "Helmet" "Boots" "Gloves" "Foci" "Body" 
 	Rarity  Rare
 	SetFontSize 35
 	SetTextColor 250 187 69
@@ -658,7 +658,7 @@ Show
 Show
 	Rarity = Normal Magic Rare
 	BaseType "Rattling Sceptre" "Massive Spear" "Grand Spear" "Spiked Spear" "Sacred Maul" "Ironwood Greathammer" "Massive Greathammer" "Attuned Wand" "Siphoning Wand" "Abyssal Cuirass" "Ornate Plate" "Sleek Jacket" "Torment Jacket"
-	ItemLevel >= 79
+	ItemLevel >= 81
 	SetFontSize 40
 	SetTextColor 81 255 139 
 	SetBorderColor 0 195 180
@@ -972,7 +972,7 @@ Show
 	Class "Socketable"
 	SetTextColor 149 224 144 
 	SetBackgroundColor 0 0 0  155
-	CustomAlertSound "ของดีย์.mp3" 300
+	CustomAlertSound "จ๊ะจ้าง.mp3" 300
 	PlayEffect Cyan Temp
 	SetFontSize 40 	
 
@@ -1191,7 +1191,7 @@ Show
 
 Show
 	Class = "Flask" 
-	AreaLevel >= 80
+	AreaLevel >= 82
 	SetTextColor 0 199 239 
 	SetBorderColor 34 91 255 
 	SetBackgroundColor 0 104 22 155
@@ -1214,7 +1214,7 @@ Show
 Hide
 	Rarity <= Magic
 	Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Staff" "Spear" "Quarter" "Crossbow" "Wand" "Sceptre" "Foci" "Quiver" "Belt" "Bows" "Rings" "Belt" "Amulet" "Buckler"
-	AreaLevel <= 75
+	AreaLevel <= 82
 
 
 Hide
