@@ -32,49 +32,37 @@
 #-------------------------- หัวข้อ
 #  ไดม่อนต่างๆ เพรช ไดมอน Relic ยูนีค จิเวล Jewel หายาก
 #--------------------------
+#  เครื่องรางใหม่ ของขลังยูนีค ADD
+Show
+	Class "Charm" 
+	Rarity = Unique
+	SetTextColor 235 112 10
+	SetBackgroundColor 255 255 255 40
+	CustomAlertSound "อย่างหรอย.mp3" 300
+	PlayEffect Cyan Temp
+	SetFontSize 40
 
 Show
 	Rarity Unique
 	BaseType "Diamond" "Ruby" "Sapphire"
+	Class Jewels
 	SetTextColor 255 0 0
 	SetBorderColor 255 0 0
 	SetBackgroundColor 255 255 255
-	CustomAlertSound "new ไดม่อน.mp3" 300
+	CustomAlertSound "new โอ้โหวนี่มัน ไดม่อน.mp3" 300
 	PlayEffect Orange
 	MinimapIcon 2 Orange Star
 	SetFontSize 42
 
 Show
 	Rarity Unique
-	BaseType "Vase Relic" "Incense Relic"
+	BaseType "Vase Relic" "Incense Relic" 
 	SetTextColor 255 0 0
 	SetBorderColor 255 0 0
 	SetBackgroundColor 255 255 255
-	CustomAlertSound "new ของดีจัดๆ.mp3" 300
+	CustomAlertSound "หากันให้ควัก 4.mp3" 300
 	PlayEffect Purple
 	MinimapIcon 2 Blue Star
-	SetFontSize 40
-
-Show # ยูนีคดีๆ อันไหนเด็ดๆ เอาชื่อมาใส่ ตรง BaseType
-	Rarity Unique
-	BaseType "Spiked Club" "Jewelled Gloves" "Heavy Belt" "Crude Bow" "Long Quarterstaff" "Shrine Sceptre" "Grand Regalia" "Armoured Cap" "Furtive Wraps" "Utility Belt" "Ornate Belt" "Emerald Ring" "Stone Tower" "Flask" "Crucible Tower" "Burnished Gauntlets" "Conqueror Plate" "Fine Bracers" "Gold Amulet"
-	SetTextColor 0 0 0
-	SetBorderColor 0 0 0
-	SetBackgroundColor 175 96 37
-	CustomAlertSound "ไหนยูนีคอยู่ไหน.mp3" 300
-	PlayEffect Blue
-	MinimapIcon 2 Blue Star
-	SetFontSize 40
-
-Show
-	Rarity Unique
-	Class "Jewel"
-	SetTextColor 255 255 255
-	SetBorderColor 255 255 255
-	SetBackgroundColor 175 37 37
-	CustomAlertSound "ไหนยูนีคอยู่ไหน.mp3" 300
-	PlayEffect Red
-	MinimapIcon 2 Yellow Star
 	SetFontSize 40
 
 #-------------------------- หัวข้อ
@@ -129,7 +117,7 @@ Show
 	PlayEffect Red
 	MinimapIcon 0 Red Star
 
-Show
+Show #เจาะเล็กสุด
 	BaseType "Lesser Jeweller's Orb"
 	SetTextColor 0 0 0
 	SetBorderColor 0 0 0
@@ -141,13 +129,13 @@ Show
 
 Show
 	Class == "Stackable Currency"
-	BaseType "Orb of Transmutation" "Orb of Augmentation" "Scroll of Wisdom"
+	BaseType "Orb of Transmutation" "Orb of Augmentation"
 	SetFontSize 26
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 210 178 135 255
 
-Hide # ซ่อน ในกรณีที่เริ่มมีเยอะแล้วขี้เกียจเก็บ  "Orb of Transmutation" "Orb of Augmentation" "Scroll of Wisdom"
+Hide # ซ่อน ในกรณีที่เริ่มมีเยอะแล้วขี้เกียจเก็บ เอาชื่อไอเท่มไปใส่ด้านล่าง  "Orb of Transmutation" "Orb of Augmentation" "Scroll of Wisdom"
 	Class == "Stackable Currency"
 	BaseType "Scroll of Wisdom"
 	SetFontSize 26
@@ -165,7 +153,12 @@ Show
 	SetBackgroundColor 73 73 73 
 	CustomAlertSound "หึ้ยๆ.mp3" 300
     DisableDropSound
-	MinimapIcon 2 Grey Circle
+MinimapIcon 2 Grey Circle
+
+Hide # ซ่อน ในกรณีที่เริ่มมีเยอะแล้วขี้เกียจเก็บ เอาชื่อไอเท่มไปใส่ด้านล่าง  "Orb of Transmutation" "Orb of Augmentation" "Scroll of Wisdom" "Artificer's Shard"
+	Class == "Stackable Currency"
+	BaseType "Scroll of Wisdom"
+	SetFontSize 26
 
 			
 Show
@@ -203,7 +196,7 @@ Show
 	
 Show
 	Class "Currency"
-	BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact"
+	BaseType "Simulacrum Splinter" "Breach Splinter" "Artifact"
 	SetTextColor 255 255 255
 	SetBorderColor 115 115 115
 	SetBackgroundColor 211 41 180 
@@ -270,7 +263,7 @@ Show # สารกลั่นที่ได้ราคาๆ
 	SetBackgroundColor 234 87 223
 	CustomAlertSound "ของดีนี่น่าาา.mp3" 300
 	PlayEffect White
-	MinimapIcon 1 White Circle
+MinimapIcon 1 White Circle
 
 # สารกลั่น เอสเซน อันนี้แบบรวมๆนับทุกอันยกเว้นอันที่แยกไว้ข้างบน
 
@@ -295,7 +288,6 @@ Show
 	CustomAlertSound "ของดีย์.mp3" 300
 	PlayEffect White
 	MinimapIcon 1 White Circle
-
 
 Show
 	Class "Currency"
@@ -412,14 +404,6 @@ Hide
 	SetBackgroundColor 255 0 0 180
 	CustomAlertSound "ถุยยย.mp3" 300
 
-Hide
-	StackSize = 48 98 128 188
-	BaseType == "Gold"
-	SetTextColor 180 180 180
-	SetBorderColor 76 158 0 255
-	SetBackgroundColor 255 0 0 180
-	CustomAlertSound "ทาด๊าา.mp3" 300
-
 
 Hide # บรรทัดสุดท้าย ไว้เก็บตก ซ่อนแมร้งทั้งหมด คือถ้าตรงเงื่อนไขข้างบนก็ทำงานปกติ
 	StackSize >= 0
@@ -448,24 +432,24 @@ Show # Skill Gems หินสกิลทั่วไป
 	
 Show # Support Gems หินที่ใช้เลือก GEM ใส่ในสกิลอีกที มันมีแค่ 3 ระดับ
 	BaseType == "Uncut Support Gem"
-    ItemLevel >= 1 #ปรับเวลตรงนี้
+    ItemLevel >= 1 #ปรับเวลตรงนี้ อันนี้มีแค่ 1-3 จริงๆไม่ต้องไปปรับก็ได้หลังๆมัน ดรอป 3 ตลอด
 	SetFontSize 35
 	SetTextColor 155 241 249  
 	SetBorderColor 55 0 107 
 	SetBackgroundColor 107 0 62  80
-	CustomAlertSound "kyaaaa.mp3" 300
+	CustomAlertSound "n หินสกิลเจม.mp3" 285
 	PlayEffect Red Temp
 	MinimapIcon 2 White Circle	
 
 	
 Show # Spirit Gems หินสกิลวิญญาณ
 	BaseType == "Uncut Spirit Gem"
-    ItemLevel >= 1
+    ItemLevel >= 1 #ปรับเวลตรงนี้
 	SetFontSize 35
 	SetTextColor 155 241 249  
 	SetBorderColor 55 0 107 
 	SetBackgroundColor 107 0 62  80
-	CustomAlertSound "หินสกิล.mp3" 300
+	CustomAlertSound "n หินสกิลวิญญาณ.mp3" 285
 	PlayEffect Red Temp
 	MinimapIcon 2 Red Circle	
 
@@ -482,45 +466,43 @@ Hide #บรรทัดปิด ไว้เก็บตก ซ่อน น�
 # ถ้าสูงกว่า 10 บางทีได้2-3อันแล้วแต่ดวง
 # "Helmet" "Boots" "Gloves" "Foci" "Body" หมวดหมู่ของที่เอามาบดได้
 
-Show # NORMAL ระดับไอเท่ม ขาวธรรมดา
-	Quality >= 10
-	Class = "Flask" "Helmet" "Boots" "Gloves" "Foci" "Body" 
-	Rarity Normal
+Show # อันนี้คือ คุณภาพเกิน 12 เวลาบดจะได้เยอะ ไฮไลท์สีเป็นพิเศษ
+	Quality >= 12
+	Class = "Helmet" "Boots" "Gloves" "Foci" "Body" "Flasks" 
+	Rarity  Normal Magic Rare
 	SetFontSize 35
 	SetTextColor 250 187 69
 	SetBorderColor 250 89 69
 	SetBackgroundColor 	128 128 128 30
+	PlayEffect Orange Temp
+	CustomAlertSound "จับไปบดให้หมด.mp3" 300
+	MinimapIcon 0 Orange Kite
+
+Show # NORMAL ระดับไอเท่ม ขาวธรรมดา
+	Quality >= 6
+	Class = "Helmet" "Boots" "Gloves" "Foci" "Body" "Flasks"
+	Rarity Normal
+	SetFontSize 35
+	SetTextColor 255 255 255
+	SetBackgroundColor 	187 187 187  30
 	PlayEffect Orange Temp
 	CustomAlertSound "จับไปบดให้หมด.mp3" 300
 	MinimapIcon 0 Orange Kite
 
 Show # MAGIC ระดับไอเท่ม ฟ้า เมจิก
-	Quality >= 10
-	Class = "Flask" "Helmet" "Boots" "Gloves" "Foci" "Body" 
+	Quality >= 6
+	Class = "Helmet" "Boots" "Gloves" "Foci" "Body" "Flasks"
 	Rarity Magic
 	SetFontSize 35
-	SetTextColor 250 187 69
-	SetBorderColor 250 89 69
-	SetBackgroundColor 	128 128 128 30
+	SetTextColor 61 138 176 
+	SetBackgroundColor 	0 86 211  30
 	PlayEffect Orange Temp
 	CustomAlertSound "จับไปบดให้หมด.mp3" 300
 	MinimapIcon 0 Orange Kite
 
-Show # RARE ระดับไอเท่ม แรร์เหลืองทอง
-	Quality >= 10
-	Class = "Flask" "Helmet" "Boots" "Gloves" "Foci" "Body" 
-	Rarity  Rare
-	SetFontSize 35
-	SetTextColor 250 187 69
-	SetBorderColor 250 89 69
-	SetBackgroundColor 	128 128 128 30
-	PlayEffect Orange Temp
-	CustomAlertSound "จับไปบดให้หมด.mp3" 300
-	MinimapIcon 0 Orange Kite
-		
-#Hide # ซ่อน ระดับน้อยๆ
+#Hide # ซ่อน ระดับน้อยๆ ย่อยไม่คุ้ม บางทีได้อันเดียวบางทีไม่ได้ 
 #	Quality <= 5
-#	Class = "Helmet" "Boots" "Gloves" "Foci" "Body" 
+#	Class = "Helmet" "Boots" "Gloves" "Foci" "Body" "Flasks"
 #	Rarity  Normal Magic Rare
 
 
@@ -531,11 +513,11 @@ Show # RARE ระดับไอเท่ม แรร์เหลืองท�
 # ศิลานำทางต่างๆ หลักๆปรับแค่เวล
 # ส่วนบรรทัดนี้คือ AnyEnchantment True ศิลาที่ได้รับผลของการอัพเกรด เดดิเลี่ยม
 
-Show # WAYSTONES
+Show # WAYSTONES โชว์ MAP 15 แต่ต้องมี ยัดเดดิเลี่ยม
 	BaseType "Waystone"
 	WaystoneTier = 15
 	Rarity = Normal Magic Rare
-	AnyEnchantment True
+	AnyEnchantment True # เอ็นซ้าน เดดิเลี่ยม 
 	SetFontSize 36
 	SetTextColor 122 233 255  
 	SetBorderColor 255 206 84 
@@ -544,11 +526,11 @@ Show # WAYSTONES
 	PlayEffect Yellow
 	MinimapIcon 0 Cyan Cross	
 
-Show # WAYSTONES
+Show # WAYSTONES โชว์ MAP 14 แต่ต้องมี ยัดเดดิเลี่ยม
 	BaseType "Waystone"
 	WaystoneTier = 14
 	Rarity = Magic Rare
-	AnyEnchantment True
+	AnyEnchantment True # เอ็นซ้าน เดดิเลี่ยม 
 	SetFontSize 36
 	SetTextColor 122 233 255  
 	SetBorderColor 255 206 84 
@@ -557,11 +539,11 @@ Show # WAYSTONES
 	PlayEffect Yellow
 	MinimapIcon 0 Cyan Cross		
 
-Show # WAYSTONES
+Show # WAYSTONES โชว์ MAP 11 ขึ้นไป แต่ต้องมี ยัดเดดิเลี่ยม
 	BaseType "Waystone"
 	WaystoneTier >= 11
 	Rarity = Magic Rare
-	AnyEnchantment True
+	AnyEnchantment True # เอ็นซ้าน เดดิเลี่ยม 
 	SetFontSize 36
 	SetTextColor 204 253 255
 	SetBorderColor 0 210 216  
@@ -570,8 +552,7 @@ Show # WAYSTONES
 	PlayEffect Yellow
 	MinimapIcon 0 Cyan Cross	
 
-	
-Show # WAYSTONES
+Show # WAYSTONES โชว์ MAP 15 แรร์สีทอง (เน้น)
 	BaseType "Waystone"
     Rarity = Rare
 	WaystoneTier = 15
@@ -581,10 +562,9 @@ Show # WAYSTONES
 	SetBackgroundColor 255 212 36  190
 	CustomAlertSound "แมพT15-4.mp3" 300
 	PlayEffect yellow Temp
-	MinimapIcon 0 Grey Cross	
+	MinimapIcon 0 Grey Cross			
 	
-	
-Show # WAYSTONES
+Show # WAYSTONES  โชว์ MAP 14 แรร์สีทอง (เน้น)
 	BaseType "Waystone"
 	WaystoneTier = 14
 	Rarity = Rare
@@ -620,53 +600,37 @@ Show # WAYSTONES
 #	CustomAlertSound "แมพT13.mp3" 300
 #	PlayEffect cyan Temp
 	
-Hide # WAYSTONES
+Show # WAYSTONES โชว์แมร้งหมดอะ ตั้งค่าที่เลเวล WaystoneTier 
 	BaseType "Waystone"
-	WaystoneTier < 14
+	WaystoneTier >= 14 # เวลเริ่มเยอะไม่อยากเก็บก็มาปรับเวล
 	MinimapIcon 0 Grey Cross
 
-Show # WAYSTONES
-	Class "Pinnacle Keys"
-	SetFontSize 36
-	SetTextColor 255 245 40 
-	SetBorderColor 255 255 255 
-	SetBackgroundColor 255 255 82 50
-	CustomAlertSound "new ชิ้นส่วนบอสซิทาเดล.mp3" 300
-	PlayEffect Yellow
+Hide # WAYSTONES
+	BaseType "Waystone"
 	
 #============================== หัวข้อ
-#         DROP CUSTOM เพิ่มไอเท่มตรงนี้
+#         DROP CUSTOM เพิ่มไอเท่มตรงนี้ หา หาของ หาไอเทม
 #==============================	
 # อยากจะปรับ อยากจะ เน้น อยากจะโชว์อะไรเป็นพิเศษ ปรับตรงส่วนนี้
 # https://poe2db.tw/us/ เว็บนี้ใช้ดูประเภทไอเท่ม ชื่อ BaseType จะเป็นส่วนที่เราต้องเอามาใส่
 # หลักๆที่ปรับคือ เลือกระดับ - ชื่อไอเท่ม  - ช่วงเลเวลที่ต้องการ
 #              Rarity  - BaseType -   ItemLevel
-
-
-Show
-	Rarity = Unique
-	BaseType "Hardwood Spear" "Rampart Tower Shield"
-	SetFontSize 40
-	SetTextColor 81 255 139 
-	SetBorderColor 0 195 180
-	SetBackgroundColor 152 255 122 100
-	PlayAlertSound 16 300
-	CustomAlertSound "new หากันให้ควั๊ก.mp3" 300
-	PlayEffect Yellow Temp
-	MinimapIcon 1 Yellow Kite
+# ตรง ส่วนนี้ คุณควรมาปรับ หรือปรับให้เป็นนะครับ อะไรที่สำคัญ อะไรที่เราตามหา อยากจะเก็บมาทำของต่อเอาชื่อมาใส่
+# เวลาใส่ก็ เว้นวรรคทีนึง เพิ่ม " หัวท้าย เช่น "XXXX1" "XXXX2"
+# ถ้าเป็นไอเท่ม ระดับ Unique ให้ไปใส่หัวข้อด้านบนๆของฟิลเตอร์ ตรง Unique คัด เอาชื่อใส่ ได้เลย
+# ถ้าบรรไว้ในหมวด DROP CUSTOM มันจะทับกันกับหัวข้อ Unique ด้านบน
 
 Show
 	Rarity = Normal Magic Rare
 	BaseType "Rattling Sceptre" "Massive Spear" "Grand Spear" "Spiked Spear" "Sacred Maul" "Ironwood Greathammer" "Massive Greathammer" "Attuned Wand" "Siphoning Wand" "Abyssal Cuirass" "Ornate Plate" "Sleek Jacket" "Torment Jacket"
 	ItemLevel >= 81
 	SetFontSize 40
-	SetTextColor 81 255 139 
-	SetBorderColor 0 195 180
-	SetBackgroundColor 152 255 122 100
+	SetTextColor 161 255 167   
+	SetBackgroundColor 19 145 26 200
 	PlayAlertSound 16 300
 	CustomAlertSound "new หากันให้ควั๊ก.mp3" 300
-	PlayEffect Yellow Temp
-	MinimapIcon 1 Yellow Kite
+	PlayEffect Green Temp
+	MinimapIcon 1 Green Kite
 
 # ตัวอย่างแหวนบรีช อันนี้สำคัญ โชว์แมร้งทุกระดับประทับใจ
 Show
@@ -680,6 +644,40 @@ Show
 	CustomAlertSound "บรีช ริง.mp3" 300
 	PlayEffect Yellow Temp
 	MinimapIcon 1 Yellow Kite
+
+Show # 
+	Rarity Unique
+	BaseType "Forked Spear" "Crude Bow" 
+	SetTextColor 0 0 0
+	SetBorderColor 0 0 0
+	SetBackgroundColor 175 96 37
+	CustomAlertSound "ทาด๊าา.mp3" 300
+	PlayEffect Blue
+	MinimapIcon 2 Blue Star
+	SetFontSize 40
+
+
+Show # ยูนีคดีๆ อันไหนเด็ดๆ เอาชื่อมาใส่ ตรง BaseType ยูนีคคัด หายูนีค
+	Rarity Unique
+	BaseType "Rampart Tower Shield" "Spiked Club" "Jewelled Gloves" "Heavy Belt" "Crude Bow" "Long Quarterstaff" "Shrine Sceptre" "Grand Regalia" "Armoured Cap" "Furtive Wraps" "Utility Belt" "Ornate Belt" "Emerald Ring" "Stone Tower" "Flask" "Crucible Tower" "Burnished Gauntlets" "Conqueror Plate" "Fine Bracers" "Gold Amulet"
+	SetTextColor 0 0 0
+	SetBorderColor 0 0 0
+	SetBackgroundColor 175 96 37
+	CustomAlertSound "ไหนยูนีคอยู่ไหน.mp3" 300
+	PlayEffect Blue
+	MinimapIcon 2 Blue Star
+	SetFontSize 40
+
+
+Show # บรรทัดปิดนอกเหนือจาก รายการที่ระบุด้านบน ยูนีคชิ้นอื่นๆที่เหลือ จะ ยูนีคนะแต่มันขยะ
+	Rarity Unique
+	SetTextColor 175 96 37 255
+	SetBorderColor 175 96 37 255
+	SetBackgroundColor 53 13 13 255
+	CustomAlertSound "ยูนีคนะแต่มันขยะ.mp3" 300
+	PlayEffect Brown
+	MinimapIcon 2 Brown Star
+	SetFontSize 40
 
 	
 #==============================หัวข้อ
@@ -751,7 +749,7 @@ Show
 	CustomAlertSound "ศิลาดรอป BG.mp3" 300
 	PlayEffect Purple Temp
 	MinimapIcon 1 Purple Square
-	SetFontSize 30	
+	SetFontSize 30		
 
 
 
@@ -798,7 +796,7 @@ Show # อันนี้เจาะจง แหวน Sapphire ขาว
 Show # เจาะจง สร้อยสเตล่า ขาว
     Class "Amulets" 
     Rarity = Normal 
-    BaseType "Stellar Amulet"
+    BaseType "Stellar Amulet" 
 	SetFontSize 36
 	SetTextColor 255 255 255
 	SetBorderColor 255 216 0 
@@ -807,26 +805,15 @@ Show # เจาะจง สร้อยสเตล่า ขาว
 	MinimapIcon 0 Yellow Pentagon
     PlayEffect Orange Temp	
 	
-Show # แสดง แหวน Magic เจาะจงชื่อรุ่นตาม BaseType
-	Class "Rings"
-    Rarity = Magic 
-    BaseType "Ruby Ring" "Topaz Ring" "Emerald Ring" "Amethyst Ring" "Prismatic Ring"
-	SetFontSize 33
-	SetTextColor 255 255 255 
-	SetBorderColor 255 255 255
-	SetBackgroundColor 200 200 200 150 
-	PlayAlertSoundPositional 16 300
-	CustomAlertSound "จ๊ะจ้าง.mp3" 300
-	MinimapIcon 0 Yellow Pentagon
-
+	
 Show # แสดง แหวน สร้อย เข็มขัด Normal เจาะจงชื่อรุ่นตาม BaseType
     Class "Rings" "Amulets" "Belts"
     Rarity = Normal 
-    BaseType "Heavy Belt" "Ornate Belt" "Double Belt" "Ruby Ring" "Topaz Ring" "Emerald Ring" "Amethyst Ring" "Prismatic Ring"
+    BaseType "Heavy Belt" "Ornate Belt" "Double Belt" "Ruby Ring" "Topaz Ring" "Emerald Ring" "Amethyst Ring" "Prismatic Ring" "Double Belt" "Solar Amulet" 
 	SetFontSize 33
 	SetTextColor 255 255 255 
 	SetBorderColor 255 255 255
-	SetBackgroundColor 200 200 200 150 
+	SetBackgroundColor 200 200 200 150 	
 	PlayAlertSoundPositional 16 300
 	CustomAlertSound "ประดับขาว.mp3" 300
 	MinimapIcon 0 Yellow Pentagon
@@ -840,24 +827,14 @@ Hide # AMULETS RINGS BELTS
 	SetBorderColor 128 128 128 
 	SetBackgroundColor 0 116 12 150	
 
-#  เครื่องรางใหม่ ของขลังยูนีค ADD
-Show
-	Class "Charm" 
-	Rarity = Unique
-	SetTextColor 0 240 190
-	CustomAlertSound "อย่างหรอย.mp3" 300
-	PlayEffect Cyan Temp
-	SetFontSize 40
-
-Show # บรรทัดปิดนอกเหนือจากที่ระบุด้านบน ยูนีคชิ้นอื่นๆที่เหลือ จะ ยูนีคนะแต่มันขยะ
-	Rarity Unique
-	SetTextColor 175 96 37 255
-	SetBorderColor 175 96 37 255
-	SetBackgroundColor 53 13 13 255
-	CustomAlertSound "ยูนีคนะแต่มันขยะ.mp3" 300
-	PlayEffect Brown
-	MinimapIcon 2 Brown Star
-	SetFontSize 40	
+# โชว์แบบเหมารวม ประดับ แหวน สร้อย เข็มขัดที่เป็นสีทองโชว์หมด
+Show # AMULETS RINGS BELTS 
+	Class == "Rings" "Amulets" "Belts"
+	Rarity = Rare 
+	SetFontSize 36
+	SetTextColor 255 202 0
+	SetBorderColor 255 202 0
+	SetBackgroundColor 83 83 83 155
 
 # พวกเครื่องรางที่นิยมใช้กัน กบทอง กันสตั้น กันแช่
 Show 
@@ -869,31 +846,31 @@ Show
 	SetFontSize 40
 
 Show # เครื่องรางสัตว์ เจาะจง รายชิ้น
-	Class "Socketable" 
-	BaseType "Boar Talisman"
-	SetTextColor 0 240 190
-	CustomAlertSound "ผัดเผ็ดหมูป่า2.mp3" 300
-	PlayEffect Cyan Temp
-	SetFontSize 40
+Class "Socketable" 
+BaseType "Boar Talisman"
+SetTextColor 0 240 190
+CustomAlertSound "ผัดเผ็ดหมูป่า2.mp3" 300
+PlayEffect Cyan Temp
+SetFontSize 40
 
 Show # บรรทัดนี้คือพวกเครื่องรางสัตว์ต่างๆ 
-	Class "Socketable" 
-	BaseType "Serpent Talisman" "Cat Talisman" "Bear Talisman" "Rabbit Talisman" "Fox Talisman" "Wolf Talisman" 
-	SetTextColor 0 240 190
-	CustomAlertSound "ถลกหนังมันออกมาให้หมด.mp3" 300
-	PlayEffect Cyan Temp
-	SetFontSize 40
+Class "Socketable" 
+BaseType "Serpent Talisman" "Cat Talisman" "Bear Talisman" "Rabbit Talisman" "Fox Talisman" "Wolf Talisman" 
+SetTextColor 0 240 190
+CustomAlertSound "ถลกหนังมันออกมาให้หมด.mp3" 300
+PlayEffect Cyan Temp
+SetFontSize 40
 
 Show # บรรทัดนี้คือพวกเครื่องรางสัตว์ต่างๆ 
-	Class "Socketable" 
-	BaseType "Primate Talisman"  "Stag Talisman" "Ox Talisman" "Owl Talisman"
-	SetTextColor 0 240 190
-	CustomAlertSound "กาดูก1.mp3" 300
-	PlayEffect Cyan Temp
-	SetFontSize 40
+Class "Socketable" 
+BaseType "Primate Talisman"  "Stag Talisman" "Ox Talisman" "Owl Talisman"
+SetTextColor 0 240 190
+CustomAlertSound "กาดูก1.mp3" 300
+PlayEffect Cyan Temp
+SetFontSize 40
 
 Hide # เครื่องรางนอกเหนือจากที่ระบุข้างบน ซ่อนหมด
-	BaseType " Charm"
+BaseType " Charm"
 	
 
 #---------------------------------------------- หัวข้อ
@@ -905,24 +882,24 @@ Hide # เครื่องรางนอกเหนือจากที่�
 
 # Special A Tier - League specific socketables and jewels
 Show 
-	BaseType "Soul Core" "Timeless"
-	SetTextColor 0 240 190
-	SetBorderColor 0 240 190
-	SetFontSize 40
-	MinimapIcon 2 Cyan Triangle
+BaseType "Soul Core" "Timeless"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
 	CustomAlertSound "I feel good.mp3" 300
-	PlayEffect Cyan
+PlayEffect Cyan
 
 
 # Special A Tier - Sanctum Relics มรดกตกทอด
 Show 
-	Class "Relic"
-	SetTextColor 0 240 190
-	SetBorderColor 0 240 190
-	SetFontSize 40
-	MinimapIcon 2 Cyan Triangle
-	CustomAlertSound "จ๊ะจ้าง.mp3" 300
-	PlayEffect Cyan
+Class "Relic"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+MinimapIcon 2 Cyan Triangle
+CustomAlertSound "จ๊ะจ้าง.mp3" 300
+PlayEffect Cyan
 
 #================================ หัวข้อ
 #=======     Jewels     =========
@@ -931,23 +908,23 @@ Show
 
 # บรรทัดนี้เหมารวมๆ ถ้าเจอจิเวล แรร์สีทอง
 Show 
-	Class "Jewel"
-	Rarity Rare
-	SetTextColor 0 240 190
-	SetBorderColor 0 240 190
-	SetFontSize 40
-	CustomAlertSound "Jewelllll.mp3" 300
-	MinimapIcon 2 Cyan Triangle
-	PlayEffect Cyan
+Class "Jewel"
+Rarity Rare
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+SetFontSize 40
+CustomAlertSound "Jewelllll.mp3" 300
+MinimapIcon 2 Cyan Triangle
+PlayEffect Cyan
 
 # บรรทัดนี้เหมารวมๆ ถ้าเจอจิเวล
 Show
-	Class "Jewel"
-	SetTextColor 0 240 190
-	SetBorderColor 0 240 190
-	CustomAlertSound "Jewelllll.mp3" 300
-	SetFontSize 40
-	PlayEffect Cyan Temp
+Class "Jewel"
+SetTextColor 0 240 190
+SetBorderColor 0 240 190
+CustomAlertSound "Jewelllll.mp3" 300
+SetFontSize 40
+PlayEffect Cyan Temp
 
 #============================== หัวข้อ
 #==========   RUNE   ==========
@@ -958,12 +935,8 @@ Show
 
 # ซ่อน ระดับต่ำของ รูน
 #Hide 
-#BaseType "Lesser Desert Rune" "Lesser Glacial Rune" "Lesser Storm Rune" "Lesser Iron Rune" "Lesser Body Rune" "Lesser Mind Rune" "Lesser Rebirth Rune" "Lesser Inspiration Rune" "Lesser Stone Rune" "Lesser Vision Rune"
-#Class "Socketable"
-
-Hide 
-	BaseType "Lesser Resolve Rune" "Lesser Adept Rune" "Lesser Tempered Rune" "Lesser Robust Rune"
-	Class "Socketable"
+	#BaseType "Lesser Resolve Rune" "Lesser Adept Rune" "Lesser Tempered Rune" "Lesser Robust Rune" "Lesser Desert Rune" "Lesser Glacial Rune" "Lesser Storm Rune" "Lesser Iron Rune" "Lesser Body Rune" "Lesser Mind Rune" "Lesser Rebirth Rune" "Lesser Inspiration Rune" "Lesser Stone Rune" "Lesser Vision Rune"
+	#Class "Socketable"
 
 
 # RUNE รูนสแต๊ด เพิ่งอัพเดทมาใหม่ อีก 4 อัน
@@ -972,20 +945,29 @@ Show
 	Class "Socketable"
 	SetTextColor 149 224 144 
 	SetBackgroundColor 0 0 0  155
-	CustomAlertSound "จ๊ะจ้าง.mp3" 300
+	CustomAlertSound "n รูนดีนิ.mp3" 300
 	PlayEffect Cyan Temp
 	SetFontSize 40 	
 
 
 # โชว์ระดับสูงและทั้งหมด แต่ มันก็จะไม่โชว์ระดับต่ำ เพราะ บรรทัดบนมันเข้าเงื่อนไขว่าซ่อนไปแล้ว
 Show 
-	BaseType "Greater" "Greater Rune" "Rune" 
+	BaseType "Greater" "Greater Rune"
 	Class "Socketable"
-	SetTextColor 149 224 0 
-	SetBackgroundColor 0 0 0  155
+	SetTextColor 210 75 75 
+	SetBackgroundColor 255 255 255  155
 	CustomAlertSound "รูนระดับสูง.mp3" 300
+	PlayEffect red Temp
+	SetFontSize 40 
+
+Show 
+	BaseType "Rune"
+	Class "Socketable"
+	SetTextColor 180 50 210 
+	SetBackgroundColor 0 0 0  155
+	CustomAlertSound "n รูนดีนิ.mp3" 300
 	PlayEffect Cyan Temp
-	SetFontSize 40
+	SetFontSize 40 
 
 #================================ หัวข้อ
 #       หมวด Currency ต่างๆ
@@ -1117,9 +1099,9 @@ Show # เครื่องราง อัพเดทมาใหม่
 	BaseType "Omen of Reinforcements" "Omen of Secret Compartments" "Omen of the Hunt" "Omen of Answered Prayers"
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
-	SetBackgroundColor 240 90 35
+	SetBackgroundColor 116 20 255 210
 	CustomAlertSound "รางบอกเหตุพิเศษ.mp3" 300
-	PlayEffect White
+	PlayEffect Purple Temp
 	MinimapIcon 2 White Circle
 	SetFontSize 40 
 
@@ -1181,6 +1163,25 @@ Show
 	PlayEffect White
 	SetFontSize 30
 
+Show # WAYSTONES
+	Class "Pinnacle Keys"
+	SetFontSize 36
+	SetTextColor 255 245 40 
+	SetBorderColor 255 255 255 
+	SetBackgroundColor 255 255 82 50
+	CustomAlertSound "new ชิ้นส่วนบอสซิทาเดล.mp3" 300
+	PlayEffect Yellow
+
+
+Show # WAYSTONES
+	Class "Map Fragments" 
+	BaseType "Cowardly Fate" "Deadly Fate" "Victorious Fate"
+	SetFontSize 36
+	SetTextColor 255 245 40 
+	SetBorderColor 255 255 255 
+	SetBackgroundColor 255 255 82 50
+	CustomAlertSound "new ชิ้นส่วนบอสเคออส.mp3" 300
+	PlayEffect Yellow	
 
 ##============== หัวข้อ
 #    ขวดยา 
@@ -1204,21 +1205,23 @@ Show
 #ตรงส่วนนี้ หมายถึง ผมเอามาไว้ล่างสุดเพราะ 
 #เอาไว้ กำหนดว่า ถ้านอกเหนือจากที่ระบุไว้  ก็จะมาเข้าเงื่อนไขสุดท้ายด้านล่าง
 
-Show
+Show # โชว์ไว้ก่อน ของสีทอง ระดับแรร์ หลักๆปรับแค่เวล
 	Rarity = Rare
 	Class = "Flask" "Body" "Helmet" "Boots" "Staff" "Wand" "Sceptre" "Foci" "Quiver" "Belt" "Gloves" "Bow" "Shields" "Buckler" 
 	AreaLevel >= 60
 	SetFontSize 32
 
 #ซ่อนของทั้งหมด ของขาว ของฟ้า กำหนดแค่เวล
+# ระดับสีฟ้า ลงไป ซ่อนทั้งหมด นอกเหนือจากเงื่อนไขที่ตั้งไว้ มาตั้งกำหนดแค่เวล
+# อธิบายให้เข้าใจง่ายๆ ของสีฟ้า และ สี ขาว ที่เวลไม่ถึง ซ่อน แมร้งทั้งหมด
 Hide
-	Rarity <= Magic
-	Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Staff" "Spear" "Quarter" "Crossbow" "Wand" "Sceptre" "Foci" "Quiver" "Belt" "Bows" "Rings" "Belt" "Amulet" "Buckler"
-	AreaLevel <= 82
+Rarity <= Magic
+Class "Flask" "Body" "Helmet" "Boots" "Gloves" "Shields" "Mace" "Staff" "Spear" "Quarter" "Crossbow" "Wand" "Sceptre" "Foci" "Quiver" "Belt" "Bows" "Rings" "Belt" "Amulet" "Buckler"
+AreaLevel <= 82
 
 
 Hide
-	Class "Currency"
-	BaseType "rune"
+Class "Currency"
+BaseType "rune"
 
 
