@@ -444,7 +444,7 @@ Show # Support Gems หินที่ใช้เลือก GEM ใส่ใ�
 	
 Show # Spirit Gems หินสกิลวิญญาณ
 	BaseType == "Uncut Spirit Gem"
-    ItemLevel >= 1 #ปรับเวลตรงนี้
+    ItemLevel >= 19 #ปรับเวลตรงนี้
 	SetFontSize 35
 	SetTextColor 155 241 249  
 	SetBorderColor 55 0 107 
@@ -620,9 +620,62 @@ Hide # WAYSTONES
 # ถ้าเป็นไอเท่ม ระดับ Unique ให้ไปใส่หัวข้อด้านบนๆของฟิลเตอร์ ตรง Unique คัด เอาชื่อใส่ ได้เลย
 # ถ้าบรรไว้ในหมวด DROP CUSTOM มันจะทับกันกับหัวข้อ Unique ด้านบน
 
+#อาวุธ
 Show
 	Rarity = Normal Magic Rare
-	BaseType "Rattling Sceptre" "Massive Spear" "Grand Spear" "Spiked Spear" "Sacred Maul" "Ironwood Greathammer" "Massive Greathammer" "Attuned Wand" "Siphoning Wand" "Abyssal Cuirass" "Ornate Plate" "Sleek Jacket" "Torment Jacket"
+	BaseType "Massive Spear" "Grand Spear" "Spiked Spear" "Massive Greathammer" "Ironwood Greathammer"
+	ItemLevel >= 81
+	SetFontSize 40
+	SetTextColor 161 255 167   
+	SetBackgroundColor 19 145 26 200
+	PlayAlertSound 16 300
+	CustomAlertSound "new หากันให้ควั๊ก.mp3" 300
+	PlayEffect Green Temp
+	MinimapIcon 1 Green Kite
+
+#หมวก
+Show
+	Rarity = Normal Magic Rare
+	BaseType "Soaring Mask" "Kamasan Tiara" "Paragon Greathelm"
+	ItemLevel >= 81
+	SetFontSize 40
+	SetTextColor 161 255 167   
+	SetBackgroundColor 19 145 26 200
+	PlayAlertSound 16 300
+	CustomAlertSound "new หากันให้ควั๊ก.mp3" 300
+	PlayEffect Green Temp
+	MinimapIcon 1 Green Kite
+
+#เสื้อเกราะ
+Show
+	Rarity = Normal Magic Rare
+	BaseType "Sleek Jacket" "Rambler Jacket" "Falconer's Jacket" "Flowing Raiment" "Corvus Mantle" "Conjurer Mantle" "Abyssal Cuirass" "Ornate Plate"
+	ItemLevel >= 81
+	SetFontSize 40
+	SetTextColor 161 255 167   
+	SetBackgroundColor 19 145 26 200
+	PlayAlertSound 16 300
+	CustomAlertSound "new หากันให้ควั๊ก.mp3" 300
+	PlayEffect Green Temp
+	MinimapIcon 1 Green Kite
+
+#ถุงมือ
+Show
+	Rarity = Normal Magic Rare
+	BaseType "Vaal Wraps" "Vaal Gloves" "Vaal Mitts"
+	ItemLevel >= 81
+	SetFontSize 40
+	SetTextColor 161 255 167   
+	SetBackgroundColor 19 145 26 200
+	PlayAlertSound 16 300
+	CustomAlertSound "new หากันให้ควั๊ก.mp3" 300
+	PlayEffect Green Temp
+	MinimapIcon 1 Green Kite
+
+#รองเท้า
+Show
+	Rarity = Normal Magic Rare
+	BaseType "Quickslip Shoes" "Sandsworn Sandals" "Vaal Greaves"
 	ItemLevel >= 81
 	SetFontSize 40
 	SetTextColor 161 255 167   
@@ -647,7 +700,7 @@ Show
 
 Show # 
 	Rarity Unique
-	BaseType "Forked Spear" "Crude Bow" 
+	BaseType "TEST"
 	SetTextColor 0 0 0
 	SetBorderColor 0 0 0
 	SetBackgroundColor 175 96 37
@@ -659,7 +712,7 @@ Show #
 
 Show # ยูนีคดีๆ อันไหนเด็ดๆ เอาชื่อมาใส่ ตรง BaseType ยูนีคคัด หายูนีค
 	Rarity Unique
-	BaseType "Rampart Tower Shield" "Spiked Club" "Jewelled Gloves" "Heavy Belt" "Crude Bow" "Long Quarterstaff" "Shrine Sceptre" "Grand Regalia" "Armoured Cap" "Furtive Wraps" "Utility Belt" "Ornate Belt" "Emerald Ring" "Stone Tower" "Flask" "Crucible Tower" "Burnished Gauntlets" "Conqueror Plate" "Fine Bracers" "Gold Amulet"
+	BaseType "Forked Spear" "Rampart Tower Shield" "Spiked Club" "Jewelled Gloves" "Heavy Belt" "Crude Bow" "Long Quarterstaff" "Shrine Sceptre" "Grand Regalia" "Armoured Cap" "Furtive Wraps" "Utility Belt" "Ornate Belt" "Emerald Ring" "Stone Tower" "Flask" "Crucible Tower" "Burnished Gauntlets" "Conqueror Plate" "Fine Bracers" "Gold Amulet"
 	SetTextColor 0 0 0
 	SetBorderColor 0 0 0
 	SetBackgroundColor 175 96 37
